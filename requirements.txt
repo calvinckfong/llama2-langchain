@@ -1,0 +1,11 @@
+bs4
+langchain
+langchainhub
+#llama-cpp-python
+chromadb
+#gpt4all
+sentence-transformers==2.2.2
+#unstructured==0.11.2
+html2text
+pysqlite3-binary
+pypdf
