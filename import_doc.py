@@ -22,12 +22,16 @@ def ReadDocs(pathname:str):
             print(text_path)
             loader = TextLoader(text_path)
             documents.extend(loader.load())
+        print(f'{len(documents)} docs accumulated')
     print(f'{len(documents)} documents loaded.')
     return documents
 
 def SplitDocs(docs):
-    splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=10)
+    splitter = CharacterTextSplitter(chunk_size=200, chunk_overlap=10)
     chunks = splitter.split_documents(docs)
+    #chunks = splitter.split_text(docs)
+    print(f'{len(chunks)} chunks')
+    print(chunks[10])
     return chunks 
 
 def InsertDB(host:str, port:str, collection:str, documents):
