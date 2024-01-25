@@ -61,7 +61,7 @@ class RAG:
         result = qa_chain({"query": query})
         logging.info(json.dumps(result))
         return result["result"]        
-        
+
 rag = RAG()
 
 # Install the Slack app and get xoxb- token in advance
